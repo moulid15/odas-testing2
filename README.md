@@ -6,20 +6,22 @@
 
 1. sudo vim /etc/systemd/system/rot13.service
 2. Insert this script into the 'rot13.service' file.
+    ```
     [Unit]
     Description=odas service demo
     After=network.target
-StartLimitIntervalSec=0
+    StartLimitIntervalSec=0
 
-[Service]
-Type=simple
-Restart=always
-RestartSec=1
-User=respeaker
-ExecStart=/home/respeaker/odas/bin/odaslive -v -c /home/respeaker/odas/bin/iP2.cfg
+    [Service]
+    Type=simple
+    Restart=always
+    RestartSec=1
+    User=respeaker
+    ExecStart=/home/respeaker/odas/bin/odaslive -v -c /home/respeaker/odas/bin/iP2.cfg
 
-[Install]
-WantedBy=multi-user.target
+    [Install]
+    WantedBy=multi-user.target
+    ```
 
 3. sudo su to log-in to root.
 4. run systemctl start rot13
