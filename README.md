@@ -23,9 +23,9 @@
     WantedBy=multi-user.target
     ```
 
-3. sudo su to log-in to root.
-4. run systemctl start rot13
-5. systemctl enable rot13
+3. `sudo su` to log-in to root.
+4. run `systemctl start rot13` start the service manually
+5. `systemctl enable rot13` auto start on boot
 
 Since rot13.service is already running, if we want to restart it then we have to run
-systemctl daemon-reload
+</br> `systemctl daemon-reload`
